@@ -1,0 +1,1 @@
+# DotNet5-AzureFunctions-HttpClient-Polly_ConsumoContador
