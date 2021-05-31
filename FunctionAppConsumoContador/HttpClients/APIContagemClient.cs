@@ -15,7 +15,7 @@ namespace FunctionAppConsumoContador.HttpClients
             _httpClient = httpClient;
         }
 
-        public async Task<ResultadoContador> ObterDadosContagem()
+        public async Task<ResultadoContador> ObterDadosContagemAsync()
         {
             return await _httpClient.GetFromJsonAsync<ResultadoContador>(
                 Environment.GetEnvironmentVariable("EndpointContador"));

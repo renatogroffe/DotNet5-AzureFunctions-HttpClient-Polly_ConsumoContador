@@ -16,9 +16,9 @@ namespace FunctionAppConsumoContador
         [Function("TimerTriggerConsumoContador")]
         public void Run([TimerTrigger("*/5 * * * * *")] FunctionContext context)
         {
-            var logger = context.GetLogger("TimerTrigger1ConsumoContador");
+            var logger = context.GetLogger("TimerTriggerConsumoContador");
             
-            var resultado = _apiContagemClient.ObterDadosContagem().Result;
+            var resultado = _apiContagemClient.ObterDadosContagemAsync().Result;
             logger.LogInformation($" ## Valor do contador = {resultado.ValorAtual}");
             logger.LogInformation($" ## Saudação = {resultado.Saudacao}");
             logger.LogInformation($" ## Aviso = {resultado.Aviso}");
